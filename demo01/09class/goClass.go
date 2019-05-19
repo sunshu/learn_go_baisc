@@ -2,31 +2,29 @@ package main
 
 import "fmt"
 
-func  main()  {
-
+func main() {
 
 	// var zhangsan = user{1,"zhangsan"}
 	// lisi := user{2,"lisi"}
 	// fmt.Println(zhangsan)
 	// fmt.Println(lisi)
-	n2left := node{3,nil,nil}
-	n2reft := node{4,nil,nil}
+	n2left := node{3, nil, nil}
+	n2reft := node{4, nil, nil}
 
-	n1left := node{2,&n2left,&n2reft}
-	n1 := node{1,&n1left,nil}
+	n1left := node{2, &n2left, &n2reft}
+	n1 := node{1, &n1left, nil}
 	fmt.Println(n1)
 	n1.traverse()
-
 
 }
 
 type node struct {
-	value int
-	leftNode *node
+	value     int
+	leftNode  *node
 	rightNode *node
 }
 
-func (root *node) traverse(){
+func (root *node) traverse() {
 	if root == nil {
 		return
 	}
@@ -36,14 +34,12 @@ func (root *node) traverse(){
 }
 
 func createNode(v int) *node {
-	return &node{value:v}
+	return &node{value: v}
 }
 
-func (n n) printNode
+// func (n n) printNode
 
-
-type user struct{
-	id int
-	name string
-}
-
+// type user struct{
+// 	id int
+// 	name string
+// }
